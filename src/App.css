@@ -4,3 +4,6 @@ body{font-family: 'Roboto', sans-serif;}
 .container-fluid{padding: 0px 45px;}
 
 .cursor{cursor:pointer}
+
+.bg-g,.bg-success{background: #3bb77e !important;}
+.text-g{color: #3bb77e;}
