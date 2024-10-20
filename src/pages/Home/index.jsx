@@ -1,8 +1,8 @@
 import React from "react";
-
+import HomeSlider from "./slider/index";
 const Home = ()=>{
     return(
-        <h1>Home Hello</h1>
+        <HomeSlider/>
     )
 }
 export default Home;
