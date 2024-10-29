@@ -8,16 +8,27 @@
 .home_slider_main{
     border-radius: 45px;
     overflow: hidden;
+    position: relative;
 }
 
 .slick-arrow{
     position: absolute;
     top: 47%;
-    width: 40px !important;
-    height: 40px !important;
+    width: 60px !important;
+    height: 60px !important;
     border-radius: 50% !important;
-    background: red !important;
-    z-index: 100;
+    background: #f2f3f4 !important;
+    z-index: 100 !important;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),0 3px 6px rgba(0,0,0,0.23);
+}
+
+.slick-arrow:hover{
+    background: #3bb77e !important;
+}
+
+.slick-arrow:hover::before{
+    color: #fff !important;
 }
 
 .slick-arrow.slick-next{
@@ -26,4 +37,37 @@
 
 .slick-arrow.slick-prev{
     left: 2% !important;
+}
+
+.slick-prev:before{
+    content: "\f104" !important;
+    font-family: FontAwesome !important;
+    font-size: 40px !important;
+    color: #000 !important;
+}
+
+.slick-next:before{
+    content: "\f105" !important;
+    font-family: FontAwesome !important;
+    font-size: 40px !important;
+    color: #000 !important;
+}
+
+.home_slider_main .slick-dots{
+    position: absolute;
+    bottom: 30px !important;
+}
+
+.home_slider_main .slick-dots button::before{
+    width: 10px !important;
+    height: 10px !important;
+    font-size: 16px !important;
+}
+
+.slick-active button::before{
+    color: #3bb77e !important;
+}
+
+.home_slider_main .item {
+    position: relative;
 }
