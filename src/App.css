@@ -2,11 +2,20 @@
 *{margin: 0px; padding: 0px; box-sizing: border-box;}
 body{font-family: 'Roboto', sans-serif;}
 #root{
-    zoom: 75%;
+    zoom: 80% !important;
 }
-.container-fluid{padding: 0px 45px;}
+.container-fluid{
+    padding-left: 45px !important;
+    padding-right: 45px !important;
+}
 
-.cursor{cursor:pointer}
+.cursor{cursor:pointer !important}
 
 .bg-g,.bg-success{background: #3bb77e !important;}
-.text-g{color: #3bb77e;}
+.text-g{color: #3bb77e !important;}
+
+.hd{font-size: 40px !important; font-weight: 600 !important; margin-bottom: 20px !important;}
+
+.transition{
+    transition: all 0.3s ease-in-out !important;
+}

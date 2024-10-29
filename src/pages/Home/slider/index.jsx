@@ -9,7 +9,9 @@ const HomeSlider = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        fade: true,
+        arrows: true
     };
     return (
         <section className='homeSlider'>
