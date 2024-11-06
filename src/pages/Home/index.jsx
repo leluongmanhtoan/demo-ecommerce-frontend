@@ -2,95 +2,153 @@ import React from "react";
 import HomeSlider from "./slider/index";
 import CatSlider from "../../components/catSlider";
 import Banner from "../../components/banner";
+import Banner4 from '../../assets/images/banner/banner4.jpg'
 import "./style.css"
 import Product from "../../components/product";
-const Home = ()=>{
-    return(
-        <>
-        <HomeSlider/>
-        <CatSlider/>
-        <Banner/>
-        <section className="homeProducts">
-            <div className="container-fluid">
-                <div className="d-flex align-items-center">
-                    <h2 className="hd mb-0 mt-0">Popular Products</h2>
-                    <ul className="list list-inline ml-auto filterTab">
-                        <li className="list-inline-item">
-                            <a href="" className="cursor">All</a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="" className="cursor">Milk and Dairies</a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="" className="cursor">Coffees and Teas</a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="" className="cursor">Pet Foods</a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="" className="cursor">Meats</a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="" className="cursor">Vegetables</a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="" className="cursor">Fruits</a>
-                        </li>
+import Slider from 'react-slick';
+import Slider1 from '../../assets/images/slider/slideBanner1.jpg'
 
-                    </ul>
+const Home = () => {
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        fade: false,
+        arrows: true,
+        autoplay:true,
+        autoplaySpeed: 2000
+    };
+    return (
+        <>
+            <HomeSlider />
+            <CatSlider />
+            <Banner />
+            <section className="homeProducts">
+                <div className="container-fluid">
+                    <div className="d-flex align-items-center">
+                        <h2 className="hd mb-0 mt-0">Popular Products</h2>
+                        <ul className="list list-inline ml-auto filterTab mb-0">
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">All</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">Milk and Dairies</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">Coffees and Teas</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">Pet Foods</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">Meats</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">Vegetables</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">Fruits</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div className="productRow">
+                        <div className="item">
+                            <Product tag='sale' />
+                        </div>
+                        <div className="item">
+                            <Product tag='hot' />
+                        </div>
+                        <div className="item">
+                            <Product tag='new' />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+                        <div className="item">
+                            <Product />
+                        </div>
+
+                    </div>
                 </div>
-                <div className="productRow">
-                    <div className="item">
-                        <Product/>
+            </section>
+
+
+            <section className="homeProducts homeProductsRow2 pt-0">
+                <div className="container-fluid">
+                    <div className="d-flex align-items-center">
+                        <h2 className="hd mb-0 mt-0">Daily Best Sells</h2>
+                        <ul className="list list-inline ml-auto filterTab mb-0">
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">All</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">Milk and Dairies</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a href="" className="cursor">Coffees and Teas</a>
+                            </li>
+
+                        </ul>
                     </div>
-                    <div className="item">
-                        <Product/>
+                    <br /><br />
+                    <div className="row">
+                        <div className="col-md-3 pr-5">
+                            <img src={Banner4} alt="" className="w-100" />
+                        </div>
+                        <div className="col-md-9">
+                            <Slider {...settings} className='prodSlider'>
+                                <div className="item">
+                                    <Product tag='sale' />
+                                </div>
+                                <div className="item">
+                                    <Product tag='hot' />
+                                </div>
+                                <div className="item">
+                                    <Product tag='new' />
+                                </div>
+                                <div className="item">
+                                    <Product tag='best' />
+                                </div>
+                            </Slider>
+                        </div>
                     </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    <div className="item">
-                        <Product/>
-                    </div>
-                    
                 </div>
-            </div>
-        </section>
+            </section>
         </>
-        
+
     )
 }
 export default Home;
