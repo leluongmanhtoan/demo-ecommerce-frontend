@@ -1,41 +1,136 @@
-.productThumb{
+.productThumb {
     width: 100%;
     height: auto;
     border: 1px solid rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 25px;
     transition: all 0.2s ease-in-out;
+    position: relative
 }
 
-.productThumb:hover{
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),0 3px 6px rgba(0,0,0,0.23);
+.productThumb .badge{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 16px;
+    z-index: 10;
+    color: #fff;
+    border-bottom-right-radius: 25px;
+    text-transform: capitalize;
 }
 
-.productThumb .imgWrapper{
+.productThumb .badge.hot{
+    background: #f74b81 !important;
+}
+
+.productThumb .badge.sale{
+    background: #67bcee !important;
+}
+
+.productThumb .badge.best{
+    background: #f59758 !important;
+}
+
+.productThumb .badge.new{
+    background: #3bb77e !important;
+}
+
+.productThumb:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.productThumb .imgWrapper {
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
-.productThumb .imgWrapper img{
-    transition: all 0.2s ease-in-out;
+.productThumb .imgWrapper img {
+    transition: all 0.3s ease-in-out;
 }
 
-.productThumb:hover .imgWrapper img{
-    transform: scale(1.1);
+.productThumb:hover .imgWrapper img {
+    transform: scale(1.2);
 }
 
-.productThumb .catName{
+.productThumb:hover .imgWrapper .overlay  {
+    transform: scale(1);
+    opacity: 1;
+    
+}
+
+.productThumb .imgWrapper .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.productThumb .imgWrapper .overlay ul {
+    background: #fff;
+    width: 44px;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+.productThumb .imgWrapper .overlay ul li {
+    margin-right: 0px !important;
+}
+
+.productThumb .imgWrapper .overlay ul li a {
+    display: block;
+    padding: 10px;
+}
+
+.productThumb .imgWrapper .overlay ul li a svg {
+    color: #3bb77e !important;
+}
+
+.productThumb .imgWrapper .overlay ul li a:hover svg {
+    color: #000 !important;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+
+.MuiTooltip-arrow.custom-tooltip {
+    color: #3bb77e !important;
+    /* Màu của mũi tên */
+}
+
+.MuiTooltip-tooltip.custom-tooltip {
+    background-color: #3bb77e !important;
+    /* Màu nền */
+    color: #fff !important;
+    /* Màu chữ */
+    font-size: 12px !important;
+    /* Kích thước chữ */
+    font-weight: bold !important;
+    /* Độ đậm chữ */
+}
+
+.productThumb .catName {
     color: #000;
     font-size: 14px;
     opacity: 0.8;
 }
 
-.productThumb .title{
+.productThumb .title {
     margin: 10px 0px;
 }
 
-.productThumb .title a{
+.productThumb .title a {
     color: #000;
     font-weight: 600;
     font-size: 22px;
@@ -43,27 +138,27 @@
     line-height: 22px;
 }
 
-.productThumb .brand{
+.productThumb .brand {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.productThumb .brand a{
+.productThumb .brand a {
     text-decoration: none;
 }
 
-.productThumb .price{
+.productThumb .price {
     font-size: 25px;
     margin-right: 20px;
 }
 
-.productThumb .oldPrice{
+.productThumb .oldPrice {
     font-size: 16px;
     opacity: 0.6;
     color: #000;
     text-decoration: line-through;
 }
 
-.productThumb button{
+.productThumb button {
     font-size: 20px !important;
     color: #3bb77e !important;
     padding: 5px 25px !important;
@@ -71,7 +166,7 @@
     text-transform: capitalize !important;
 }
 
-.productThumb button:hover{
+.productThumb button:hover {
     color: #fff !important;
     background: #3bb77e !important;
 }

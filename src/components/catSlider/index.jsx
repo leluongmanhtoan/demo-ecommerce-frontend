@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./style.css"
 import Slider from 'react-slick';
 import Cake from '../../assets/images/catslider/cake.png'
@@ -27,6 +27,7 @@ const CatSlider = () => {
         '#fff3ff',
         '#f2fce4',
     ])
+    const slider=useRef();
     var settings = {
         dots: false,
         infinite: true,
@@ -34,12 +35,15 @@ const CatSlider = () => {
         slidesToShow: 5,
         slidesToScroll: 1,
         fade: false,
-        arrows: true
+        arrows: true,
+        autoplay:true,
+        autoplaySpeed: 3000,
+        centerMode:true
     };
     return (
         <>
             <div className="catSliderSelection">
-                <div className="container-fluid">
+                <div className="container-fluid" ref={slider}>
                     <h2 className="hd">Featured Categories</h2>
                     <Slider {...settings} className='cat_slider_main'>
                         {
@@ -56,7 +60,7 @@ const CatSlider = () => {
                             })
                         }
 
-                        <div className="item">
+                        {/* <div className="item">
                             <div className="info">
                                 <img src={Tea} alt="" style={{ width: '64px', height: '64px' }} />
                                 <h5>Tea</h5>
@@ -83,7 +87,7 @@ const CatSlider = () => {
                                 <h5>Fruit</h5>
                                 <p>26 items</p>
                             </div>
-                        </div>
+                        </div> */}
 
                     </Slider>
                 </div>
