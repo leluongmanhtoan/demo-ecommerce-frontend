@@ -80,8 +80,8 @@ const Nav = () => {
                         <div className="phNo d-flex align-items-center ml-auto">
                             <span><SupportAgentOutlinedIcon /></span>
                             <div className="info ml-3">
-                                <h4 className="text-g">096-2304-092</h4>
-                                <p className="mb-0">24/7 Support Center</p>
+                                <h4 className="text-g mb-0">096-2304-092</h4>
+                                <p className="mb-0">Hỗ trợ trực tiếp 24/7</p>
                             </div>
                         </div>
                     </div>
