@@ -5,9 +5,11 @@ import Banner from "../../components/banner";
 import Banner4 from '../../assets/images/banner/banner4.jpg'
 import "./style.css"
 import Product from "../../components/product";
+import TopProduct from "./TopProduct";
 import Slider from 'react-slick';
-import Slider1 from '../../assets/images/slider/slideBanner1.jpg'
-
+import NewsLetterImg from "../../assets/images/banner/deliveryman.png";
+import NewsLetter from "../../components/newsletter";
+import Footer from "../../components/footer/footer";
 const Home = () => {
     var settings = {
         dots: false,
@@ -17,7 +19,7 @@ const Home = () => {
         slidesToScroll: 1,
         fade: false,
         arrows: true,
-        autoplay:true,
+        autoplay: true,
         autoplaySpeed: 2000
     };
     return (
@@ -147,6 +149,44 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <section className='topProductSection'>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col">
+                            <TopProduct title="Top Selling" />
+                        </div>
+                        <div className="col">
+                            <TopProduct title="Trending Products" />
+                        </div>
+                        <div className="col">
+                            <TopProduct title="Recently Added" />
+                        </div>
+                        <div className="col">
+                            <TopProduct title="Top Rated" />
+                        </div>
+                    </div>
+                    <br /><br />
+                </div>
+            </section>
+
+            <section className="newsLetterSection">
+                <div className="container-fluid">
+                    <div className="box d-flex align-items-center">
+                        <div className="img">
+                            <img src={NewsLetterImg} alt="" className="w-100" />
+                        </div>
+                        <div className="info">
+                            <h2>Đặt hàng ngay</h2>
+                            <p>Tháng sau sẽ tới</p>
+                            <br /><br />
+                            <NewsLetter/>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <Footer/>
         </>
 
     )
