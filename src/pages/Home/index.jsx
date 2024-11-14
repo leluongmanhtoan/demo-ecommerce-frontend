@@ -7,9 +7,7 @@ import "./style.css"
 import Product from "../../components/product";
 import TopProduct from "./TopProduct";
 import Slider from 'react-slick';
-import NewsLetterImg from "../../assets/images/banner/deliveryman.png";
-import NewsLetter from "../../components/newsletter";
-import Footer from "../../components/footer/footer";
+
 const Home = () => {
     var settings = {
         dots: false,
@@ -169,24 +167,6 @@ const Home = () => {
                     <br /><br />
                 </div>
             </section>
-
-            <section className="newsLetterSection">
-                <div className="container-fluid">
-                    <div className="box d-flex align-items-center">
-                        <div className="img">
-                            <img src={NewsLetterImg} alt="" className="w-100" />
-                        </div>
-                        <div className="info">
-                            <h2>Đặt hàng ngay</h2>
-                            <p>Tháng sau sẽ tới</p>
-                            <br /><br />
-                            <NewsLetter/>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <Footer/>
         </>
 
     )
