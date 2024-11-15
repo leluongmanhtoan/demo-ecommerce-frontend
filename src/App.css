@@ -9,9 +9,13 @@ body{font-family: 'Roboto', sans-serif;}
     padding-right: 45px !important;
 }
 
+
 .cursor{cursor:pointer !important}
 
 .bg-g,.bg-success{background: #3bb77e !important;}
+
+.btn-g{background: #3bb77e !important; padding: 10px 25px !important; border-radius: 5px !important; color: #fff !important; text-transform: capitalize !important;}
+.btn-g:hover{background: #FDC040 !important; transition: all 0.2s ease-in-out;}
 .text-g{color: #3bb77e !important;}
 
 .hd{font-size: 40px !important; font-weight: 600 !important; margin-bottom: 20px !important;}
