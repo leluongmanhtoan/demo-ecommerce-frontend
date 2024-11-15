@@ -3,6 +3,8 @@ import "./style.css"
 import MilkandDairies from "../../assets/images/category/category-1.svg"
 import Slider from '@mui/material/Slider';
 import Checkbox from '@mui/material/Checkbox';
+import Button from '@mui/material/Button';
+import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 function valuetext(value) {
     return `${value}°C`;
 }
@@ -62,26 +64,36 @@ const Sidebar = () => {
                     <div className="filters">
                         <h5>Color</h5>
                         <ul>
-                            <li><Checkbox {...label}/>Red (56)</li>
-                            <li><Checkbox {...label}/>Green (56)</li>
-                            <li><Checkbox {...label}/>Blue (56)</li>
-                            <li><Checkbox {...label}/>Red (56)</li>
-                            <li><Checkbox {...label}/>Green (56)</li>
-                            <li><Checkbox {...label}/>Blue (56)</li>
-                            <li><Checkbox {...label}/>Red (56)</li>
-                            <li><Checkbox {...label}/>Green (56)</li>
-                            <li><Checkbox {...label}/>Blue (56)</li>
-                            <li><Checkbox {...label}/>Red (56)</li>
-                            <li><Checkbox {...label}/>Green (56)</li>
-                            <li><Checkbox {...label}/>Blue (56)</li>
-                            <li><Checkbox {...label}/>Red (56)</li>
-                            <li><Checkbox {...label}/>Green (56)</li>
-                            <li><Checkbox {...label}/>Blue (56)</li>
-                            <li><Checkbox {...label}/>Red (56)</li>
-                            <li><Checkbox {...label}/>Green (56)</li>
-                            <li><Checkbox {...label}/>Blue (56)</li>
+                            <li><Checkbox {...label} color="success" />Red (56)</li>
+                            <li><Checkbox {...label} color="success" />Green (56)</li>
+                            <li><Checkbox {...label} color="success" />Blue (56)</li>
+                            <li><Checkbox {...label} color="success" />Red (56)</li>
+                            <li><Checkbox {...label} color="success" />Green (56)</li>
+                            <li><Checkbox {...label} color="success" />Blue (56)</li>
+                            <li><Checkbox {...label} color="success" />Red (56)</li>
+                            <li><Checkbox {...label} color="success" />Green (56)</li>
+                            <li><Checkbox {...label} color="success" />Blue (56)</li>
+                            <li><Checkbox {...label} color="success" />Red (56)</li>
+                            <li><Checkbox {...label} color="success" />Green (56)</li>
+                            <li><Checkbox {...label} color="success" />Blue (56)</li>
+                            <li><Checkbox {...label} color="success" />Red (56)</li>
+                            <li><Checkbox {...label} color="success" />Green (56)</li>
+                            <li><Checkbox {...label} color="success" />Blue (56)</li>
                         </ul>
                     </div>
+
+                    <div className="filters">
+                        <h5>Item Condition</h5>
+                        <ul className="mb-0">
+                            <li><Checkbox {...label} color="success" />New (56)</li>
+                            <li><Checkbox {...label} color="success" />Refurbished (56)</li>
+                            <li><Checkbox {...label} color="success" />Used (56)</li>
+                        </ul>
+                    </div>
+                    <div className="d-flex">
+                        <Button className="btn btn-g"><FilterAltOutlinedIcon/>Filter</Button>
+                    </div>
+
                 </div>
             </div>
 

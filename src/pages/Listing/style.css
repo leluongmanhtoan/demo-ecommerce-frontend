@@ -1,10 +1,10 @@
-.listingPage{
+.listingPage {
     width: 100%;
     height: auto;
     padding: 45px 0px;
 }
 
-.listingPage .breadcrumb{
+.listingPage .breadcrumb {
     width: 100%;
     height: auto;
     padding: 45px 45px;
@@ -13,7 +13,7 @@
     margin-bottom: 30px;
 }
 
-.listingPage .breadcrumb h1{
+.listingPage .breadcrumb h1 {
     font-size: 50px;
     opacity: 0.8;
     color: #000;
@@ -21,18 +21,19 @@
 }
 
 
-.listingPage .breadcrumb ul li a{
+.listingPage .breadcrumb ul li a {
     color: #000;
     font-size: 22px;
     text-decoration: none;
 }
 
-.listingPage .breadcrumb ul li{
+.listingPage .breadcrumb ul li {
     margin-right: 20px;
 }
 
 .sidebarWrapper {
     max-width: 20% !important;
+    flex: 0 0 20% !important;
 }
 
 .sidebarWrapper h3 {
@@ -43,7 +44,7 @@
     margin-bottom: 30px;
 }
 
-.sidebarWrapper h3:after{
+.sidebarWrapper h3:after {
     content: "";
     width: 100%;
     height: 3px;
@@ -53,7 +54,7 @@
     left: 0px;
 }
 
-.sidebarWrapper h3:before{
+.sidebarWrapper h3:before {
     content: "";
     width: 20%;
     height: 3px;
@@ -64,6 +65,11 @@
     z-index: 10;
 }
 
+.sidebarWrapper .sidebar {
+    position: sticky;
+    top: 120px;
+}
+
 .sidebarWrapper .sidebar .card {
     padding: 25px;
     border-radius: 10px !important;
@@ -71,7 +77,7 @@
 
 }
 
-.sidebarWrapper .sidebar .card .catList .catItem{
+.sidebarWrapper .sidebar .card .catList .catItem {
     padding: 10px 20px;
     border: 1px solid rgba(0, 0, 0, 0.050);
     cursor: pointer;
@@ -81,42 +87,136 @@
 
 }
 
-.sidebarWrapper .sidebar .card .catList .catItem h4{
+.sidebarWrapper .sidebar .card .catList .catItem h4 {
     font-size: 18px;
     color: #000;
-    
+
 }
 
-.sidebarWrapper .sidebar .card .catList .catItem .rounded-circle{
+.sidebarWrapper .sidebar .card .catList .catItem .rounded-circle {
     background: #bce3c9;
     width: 40px;
     height: 40px;
     justify-content: center;
 }
 
-.sidebarWrapper .rightContent{
+.sidebarWrapper .rightContent {
     max-width: 80%;
+    flex: 0 0 80%;
 }
 
-.sidebarWrapper .sidebar .card .catList .catItem:hover{
+.sidebarWrapper .sidebar .card .catList .catItem:hover {
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.priceRange span{
+.priceRange span {
     font-size: 18px;
 }
 
-.filters{
+.filters {
     padding: 25px 0px;
 }
 
-.filters ul li{
+.filters ul li {
     width: 100%;
     margin-bottom: 10px;
     list-style: none;
 }
 
-.filters ul{
+.filters ul {
     max-height: 400px;
     overflow-y: scroll;
+    margin-left: -10px;
+}
+
+.filters ul::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+.filters ul::-webkit-scrollbar-thumb {
+    background: #ccc !important;
+}
+
+.filters h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.sidebarWrapper .sidebar .btn {
+    width: 150px !important;
+}
+
+.rightContent .topStrip {
+    padding: 0 25px;
+}
+
+.rightContent .topStrip p {
+    font-size: 24px;
+}
+
+.rightContent .topStrip .tab_{
+    width: 200px;
+}
+
+.rightContent .topStrip .tab_ .btn_ {
+    background: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    padding: 7px 20px !important;
+    text-transform: capitalize !important;
+    color: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+}
+
+.rightContent .topStrip .tab_ .btn_ svg{
+    padding-right: 6px !important;
+    opacity: 0.8;
+}
+
+
+.rightContent .topStrip .tab_ .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    z-index: 100;
+    width: 200px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+    padding: 15px 0px;
+    border-radius: 20px;
+    position: absolute;
+
+}
+
+.rightContent .topStrip .tab_ .dropdownMenu li {
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+}
+
+.rightContent .topStrip .tab_ .dropdownMenu li button {
+    width: 100% !important;
+    text-align: left !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    justify-content: flex-start !important;
+    padding: 12px 15px !important;
+    text-transform: capitalize !important;
+    font-size: 16px !important;
+
+}
+
+.rightContent .topStrip .tab_ .dropdownMenu li button:focus {
+    outline: none;
+}
+
+.rightContent .topStrip .tab_ .dropdownMenu li button:hover {
+    background: #f1f1f1 !important;
+}
+
+.rightContent .topStrip .tab_ .dropdownMenu li button svg {
+    opacity: 0.7;
+    margin-right: 8px !important;
 }
